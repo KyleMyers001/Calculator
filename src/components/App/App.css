@@ -1,0 +1,6 @@
+.app{
+  height: 100vh;
+  background: linear-gradient(white, #006699);
+  display: grid;
+  align-items: center;
+}
