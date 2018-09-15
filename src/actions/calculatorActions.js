@@ -27,44 +27,8 @@ const calculateTotal = (previousNumbers, previousOperators) => {
   });
   return String(trimLongNumber(sum));
 }
+
 const trimLongNumber = number => parseFloat(number.toFixed(10));
-
-const hasDecimal = number => number.includes('.');
-
-export const addDecimal = (number) => {
-  if (!hasDecimal(number)) {
-    number = number.concat('', '.');
-  }
-  return {
-    type: types.ADD_DECIMAL,
-    currentNumber: number
-  };
-}
-
-const negativeZeroWithNoDecimal = number => number === "-0";
-const positiveZeroWithNoDecimal = number => number === "0";
-const numberIsTooLong = number => number.length >= 14;
-
-export const changeNumber = (number, currentNumber) => {
-  if (positiveZeroWithNoDecimal(currentNumber)) {
-    currentNumber = number;
-  }
-  else if (negativeZeroWithNoDecimal(currentNumber)) {
-    currentNumber = "-" + number;
-  }
-  else if (!numberIsTooLong(currentNumber)) {
-    currentNumber = currentNumber.concat('', number);
-  }
-
-  return { type: types.CHANGE_NUMBER, currentNumber: currentNumber };
-}
-
-const isPositiveNumber = number => !number.includes('-');
-
-export const changeNumberState = number => {
-  number = isPositiveNumber(number) ? `-${number}` : number.replace('-', '');
-  return { type: types.CHANGE_NUMBER_STATE, currentNumber: number };
-}
 
 export const showTotal = (state) => {
   storeCurrentNumberInPreviousNumbers(state);
@@ -81,14 +45,13 @@ const storeCurrentNumberInPreviousNumbers = (state) => {
   state.currentNumber = '0';
 }
 
-const storeOperatorInPreviousOperators = (state, operator) => state.previousOperators.push(operator);
-
-const replacePreviousOperator = (state, operator) => {
-  state.previousOperators.pop();
-  state.previousOperators.push(operator);
+const storeOperatorInPreviousOperators = (state, operator) => {
+  return state.previousOperators.push(operator);
 }
-const previousOperatorsExist = previousOperators => previousOperators.length > 0;
-const numberIsZero = number => Math.abs(Number(number)) === 0;
+
+const numberIsZero = (number) => {
+  return Math.abs(Number(number)) === 0;
+}
 
 export const changeOperator = (operator, state) => {
   if (!numberIsZero(state.currentNumber)) {
@@ -105,6 +68,64 @@ export const changeOperator = (operator, state) => {
     previousNumbers: state.previousNumbers,
     previousOperators: state.previousOperators
   };
+}
+
+const replacePreviousOperator = (state, operator) => {
+  state.previousOperators.pop();
+  state.previousOperators.push(operator);
+}
+
+const previousOperatorsExist = (previousOperators) => {
+  return previousOperators.length > 0;
+}
+
+const hasDecimal = (number) => {
+  return number.includes('.');
+}
+
+export const addDecimal = (number) => {
+  if (!hasDecimal(number)) {
+    number = number.concat('', '.');
+  }
+  return {
+    type: types.ADD_DECIMAL,
+    currentNumber: number
+  };
+}
+
+const negativeZeroWithNoDecimal = (number) => {
+  return number === "-0";
+}
+
+const positiveZeroWithNoDecimal = (number) => {
+  return number === "0";
+}
+
+export const changeNumber = (number, currentNumber) => {
+  if (positiveZeroWithNoDecimal(currentNumber)) {
+    currentNumber = number;
+  }
+  else if (negativeZeroWithNoDecimal(currentNumber)) {
+    currentNumber = "-" + number;
+  }
+  else if (!numberIsTooLong(currentNumber)) {
+    currentNumber = currentNumber.concat('', number);
+  }
+
+  return { type: types.CHANGE_NUMBER, currentNumber: currentNumber };
+}
+
+const numberIsTooLong = (number) => {
+  return number.length >= 14;
+}
+
+const isPositiveNumber = (number) => {
+  return !number.includes('-');
+}
+
+export const changeNumberState = number => {
+  number = isPositiveNumber(number) ? `-${number}` : number.replace('-', '');
+  return { type: types.CHANGE_NUMBER_STATE, currentNumber: number };
 }
 
 export const removeDigit = (number) => {
