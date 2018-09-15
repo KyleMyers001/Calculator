@@ -28,7 +28,9 @@ const calculateTotal = (previousNumbers, previousOperators) => {
   return String(trimLongNumber(sum));
 }
 
-const trimLongNumber = number => parseFloat(number.toFixed(10));
+const trimLongNumber = (number) => {
+  parseFloat(number.toFixed(10));
+}
 
 export const showTotal = (state) => {
   storeCurrentNumberInPreviousNumbers(state);
