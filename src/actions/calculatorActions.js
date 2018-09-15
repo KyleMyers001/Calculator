@@ -29,7 +29,7 @@ const calculateTotal = (previousNumbers, previousOperators) => {
 }
 
 const trimLongNumber = (number) => {
-  parseFloat(number.toFixed(10));
+  return parseFloat(number.toFixed(10));
 }
 
 export const showTotal = (state) => {
