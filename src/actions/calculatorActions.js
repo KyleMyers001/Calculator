@@ -1,6 +1,26 @@
 import types from './types';
 import operators from './operators';
 
+const calculate = (firstNumber, secondNumber, operator) => {
+  switch (operator) {
+    case operators.add:
+      firstNumber += secondNumber;
+      break;
+    case operators.subtract:
+      firstNumber -= secondNumber;
+      break;
+    case operators.multiply:
+      firstNumber *= secondNumber;
+      break;
+    case operators.divide:
+      firstNumber /= secondNumber;
+      break;
+    default:
+      break;
+  }
+  return firstNumber;
+}
+
 const calculateTotal = (previousNumbers, previousOperators) => {
   let sum = 0;
   previousNumbers.forEach((number, index) => {
@@ -8,22 +28,7 @@ const calculateTotal = (previousNumbers, previousOperators) => {
       sum = number;
       return;
     }
-    switch (previousOperators[index - 1]) {
-      case operators.add:
-        sum += number;
-        break;
-      case operators.subtract:
-        sum -= number;
-        break;
-      case operators.multiply:
-        sum *= number;
-        break;
-      case operators.divide:
-        sum /= number;
-        break;
-      default:
-        break;
-    }
+    sum = calculate(sum, number, previousOperators[index - 1]);
   });
   return String(trimLongNumber(sum));
 }
