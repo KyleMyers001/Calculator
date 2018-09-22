@@ -53,7 +53,7 @@ const storeCurrentNumberInPreviousNumbers = (state) => {
 }
 
 const storeOperatorInPreviousOperators = (state, operator) => {
-  return state.previousOperators.push(operator);
+  state.previousOperators.push(operator);
 }
 
 const numberIsZero = (number) => {

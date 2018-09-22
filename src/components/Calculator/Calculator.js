@@ -23,9 +23,9 @@ const Buttons = (props) => {
       <button className="calculator__btn-number" onClick={props.changeNumber.bind(this, '2')}>2</button>
       <button className="calculator__btn-number" onClick={props.changeNumber.bind(this, '3')}>3</button>
       <button className="calculator__btn-operator" onClick={props.changeOperator.bind(this, operators.add)}>+</button>
-      <button className="calculator__btn-operator" onClick={props.changeNumberState}>{"\u00B1"}</button>
+      <button className="calculator__btn-operator" onClick={props.changeNumberState}>&plusmn;</button>
       <button className="calculator__btn-number" onClick={props.changeNumber.bind(this, '0')}>0</button>
-      <button className="calculator__btn-operator" onClick={props.addDecimal}>{"\u22C5"}</button>
+      <button className="calculator__btn-operator" onClick={props.addDecimal}>&sdot;</button>
       <button className="calculator__btn-operator" onClick={props.showTotal}>=</button>
     </div>
   )
