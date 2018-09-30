@@ -101,11 +101,11 @@ export const addDecimal = (number) => {
 }
 
 const negativeZeroWithNoDecimal = (number) => {
-  return number === "-0";
+  return number === '-0';
 }
 
 const positiveZeroWithNoDecimal = (number) => {
-  return number === "0";
+  return number === '0';
 }
 
 export const changeNumber = (number, currentNumber) => {
@@ -113,7 +113,7 @@ export const changeNumber = (number, currentNumber) => {
     currentNumber = number;
   }
   else if (negativeZeroWithNoDecimal(currentNumber)) {
-    currentNumber = "-" + number;
+    currentNumber = '-' + number;
   }
   else if (!numberIsTooLong(currentNumber)) {
     currentNumber = currentNumber.concat('', number);
@@ -155,7 +155,3 @@ export const resetCalculator = () => {
     previousOperators: []
   };
 }
-
-
-
-

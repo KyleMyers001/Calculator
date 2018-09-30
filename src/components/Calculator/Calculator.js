@@ -49,9 +49,9 @@ const previousInput = (previousNumbers, previousOperators) => {
 }
 
 const numberWithCommas = (number) => {
-  var fragments = number.toString().split(".");
-  fragments[0] = fragments[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  return fragments.join(".");
+  var fragments = number.toString().split('.');
+  fragments[0] = fragments[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return fragments.join('.');
 }
 
 const mapStateToProps = state => ({
