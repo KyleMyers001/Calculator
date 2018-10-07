@@ -1,63 +1,63 @@
-.calculator{
-	margin: 0 auto;
-	width: 308px;
-	background-color: #ddd;
-	border: 1px solid #aaa;
-	-webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);    
+.calculator {
+  background-color: #ddd;
+  border: 1px solid #aaa;
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, .3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, .3);
+  margin: 0 auto;
+  width: 308px;
 }
 
-.calculator__previous-input, .calculator__current-input{
-	box-sizing: border-box;
-	text-align: right;
-	padding-right: 10px;
+.calculator__previous-input, .calculator__current-input {
+  box-sizing: border-box;
+  padding-right: 10px;
+  text-align: right;
 }
 
-.calculator__previous-input{
-	font-size: 16px;	
-	padding-top: 10px;
-	color: #555;
-	height: 35px;
+.calculator__previous-input {
+  color: #555;
+  font-size: 16px;
+  height: 35px;
+  padding-top: 10px;
 }
 
 .calculator__current-input {
-	font-size: 32px;
-	height: 40px;
+  font-size: 32px;
+  height: 40px;
 }
 
-.calculator__btn-wrapper{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	font-size: 22px;
-	display: grid;
-	grid-template-columns: 75px 75px 75px 75px;
-	grid-template-rows: 75px 75px 75px 75px 75px;
-	grid-row-gap: 2px;
-	grid-column-gap: 2px;
+.calculator__btn-wrapper {
+  display: grid;
+  font-size: 22px;
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  grid-template-columns: 75px 75px 75px 75px;
+  grid-template-rows: 75px 75px 75px 75px 75px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .calculator button {
-	text-align: center;
-	line-height: 75px;
-	cursor: pointer;
-	border: 2px solid transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  line-height: 75px;
+  text-align: center;
 }
 
-.calculator button:hover{
-	background-color: #ddd;
-	border-color: #ccc;
+.calculator button:hover {
+  background-color: #ddd;
+  border-color: #ccc;
 }
 
-.calculator__btn-number{
-	background-color: #f2f2f2;
+.calculator__btn-number {
+  background-color: #f2f2f2;
 }
 
-.calculator__btn-operator{
-	background-color: #e8e8e8;
+.calculator__btn-operator {
+  background-color: #e8e8e8;
 }
 
-.calculator__btn-operator--remove-digit{
-	transform: scale(-1, 1);
+.calculator__btn-operator--remove-digit {
+  transform: scale(-1, 1);
 }

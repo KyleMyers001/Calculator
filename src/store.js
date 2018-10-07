@@ -5,10 +5,10 @@ const reduxDevTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVT
 const initialState = {};
 const middleWare = [];
 const enhancer = () => {
-    if(reduxDevTools != null){
-        return compose(applyMiddleware(...middleWare), reduxDevTools);
-    }
-    return applyMiddleware(...middleWare);
+  if (reduxDevTools != null) {
+    return compose(applyMiddleware(...middleWare), reduxDevTools);
+  }
+  return applyMiddleware(...middleWare);
 }
 const store = createStore(rootReducer, initialState, enhancer())
 

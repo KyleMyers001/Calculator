@@ -1,6 +1,6 @@
-.app{
-  height: 100vh;
+.app {
+  align-items: center;
   background: linear-gradient(white, #006699);
   display: grid;
-  align-items: center;
+  height: 100vh;
 }

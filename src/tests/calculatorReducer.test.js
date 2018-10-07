@@ -1,6 +1,5 @@
 import * as actions from '../actions/calculatorActions';
 import reducer from '../reducers/calculatorReducer';
-import types from '../actions/types';
 import operators from '../actions/operators';
 
 const initialState = {
