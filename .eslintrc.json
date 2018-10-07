@@ -1,5 +1,11 @@
 {
-  "extends": "eslint:recommended",
+  "plugins": [
+    "react"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
@@ -9,7 +15,7 @@
   },
   "rules": {
     "quotes": ["warn", "single"],
-    "indent": ["warn", 2]
+    "indent": ["warn", 2, { "SwitchCase": 1 }]
   },
   "env": {
     "browser": true,

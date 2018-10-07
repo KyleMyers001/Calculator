@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/calculatorActions';
 import operators from '../../actions/operators';
@@ -29,6 +30,17 @@ const Buttons = (props) => (
   </div>
 );
 
+Buttons.propTypes = {
+  addDecimal: PropTypes.func,
+  changeNumber: PropTypes.func,
+  changeNumberState: PropTypes.func,
+  changeOperator: PropTypes.func,
+  resetCurrentNumber: PropTypes.func,
+  resetCalculator: PropTypes.func,
+  removeDigit: PropTypes.func,
+  showTotal: PropTypes.func,
+}
+
 const Calculator = (props) => (
   <div className="calculator">
     <div className="calculator__previous-input">{props.previousInput}</div>
@@ -36,6 +48,12 @@ const Calculator = (props) => (
     <Buttons {...props} />
   </div>
 );
+
+
+Calculator.propTypes = {
+  previousInput: PropTypes.string,
+  currentInput: PropTypes.string
+}
 
 const previousInput = (previousNumbers, previousOperators) => {
   let text = '';
