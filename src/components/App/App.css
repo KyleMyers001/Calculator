@@ -1,3 +1,14 @@
+a,
+body,
+button,
+div,
+header,
+html,
+p,
+span {
+  font-family: 'Source Sans Pro', TimesNewRoman, 'Times New Roman';
+}
+
 .app {
   align-items: center;
   background: linear-gradient(white, #006699);
