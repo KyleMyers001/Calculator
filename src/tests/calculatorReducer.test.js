@@ -3,7 +3,7 @@ import reducer from '../reducers/calculatorReducer';
 import operators from '../actions/operators';
 
 const initialState = {
-  currentNumber: 0,
+  currentNumber: '0',
   previousNumbers: [],
   previousOperators: []
 }
