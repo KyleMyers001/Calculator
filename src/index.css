@@ -1,5 +1,17 @@
+a,
+body,
+button,
+div,
+header,
+html,
+p,
+span {
+  font-family: 'Source Sans Pro', TimesNewRoman, 'Times New Roman';
+}
+
 body {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
+
+
