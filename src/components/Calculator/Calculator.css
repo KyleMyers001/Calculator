@@ -1,9 +1,9 @@
 .calculator {
   background-color: #ddd;
   border: 1px solid #aaa;
-  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, .3);
-  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, .3);
-  box-shadow: 0 15px 20px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
   width: 308px;
 }
