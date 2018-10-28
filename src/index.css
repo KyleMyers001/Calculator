@@ -6,6 +6,7 @@ header,
 html,
 p,
 span {
+  color: #333;
   font-family: 'Source Sans Pro', TimesNewRoman, 'Times New Roman';
 }
 

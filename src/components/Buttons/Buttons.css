@@ -1,6 +1,5 @@
 .calculator__btn-wrapper {
   display: grid;
-  font-size: 22px;
   grid-column-gap: 2px;
   grid-row-gap: 2px;
   grid-template-columns: 75px 75px 75px 75px;
@@ -13,6 +12,7 @@
 .calculator button {
   border: 2px solid transparent;
   cursor: pointer;
+  font-size: 14px;
   line-height: 75px;
   text-align: center;
 }
@@ -30,6 +30,11 @@
   background-color: #e8e8e8;
 }
 
-.calculator__btn-operator--remove-digit {
-  transform: scale(-1, 1);
+.calculator__btn-operator__plus-minus i {
+  display: block;
+}
+
+.calculator__btn-operator__plus-minus i:first-of-type {
+  margin-bottom: -6px;
+  margin-top: 12px;
 }
