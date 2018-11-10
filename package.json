@@ -10,8 +10,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --hot --inline --open",
-    "build": "webpack --mode production",
-    "build:dev": "webpack --mode development",
+    "build": "webpack --mode development",
+    "build:prod": "webpack --mode production",
     "watch": "webpack --watch",
     "test": "jest --watchAll"
   },
@@ -39,7 +39,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
   }
