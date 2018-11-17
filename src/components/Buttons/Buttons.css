@@ -10,7 +10,7 @@
 }
 
 .calculator button {
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   cursor: pointer;
   font-size: 14px;
   line-height: 75px;
@@ -18,8 +18,8 @@
 }
 
 .calculator button:hover {
-  background-color: #ddd;
-  border-color: #ccc;
+  background-color: #e7e7e7;
+  border-color: #d3d4d4;
 }
 
 .calculator__btn-number {
@@ -30,11 +30,23 @@
   background-color: #e8e8e8;
 }
 
-.calculator__btn-operator__plus-minus i {
+/* 
+  TODO: Use two different classes to target the buttons to round.
+  Follow the BEM convention, without making the className properties too verbose.
+*/
+.calculator__btn-operator--plus-minus {
+  border-radius: 0 0 0 8px;
+}
+
+.calculator button:last-of-type {
+  border-radius: 0 0 8px 0;
+}
+
+.calculator__btn-operator--plus-minus i {
   display: block;
 }
 
-.calculator__btn-operator__plus-minus i:first-of-type {
+.calculator__btn-operator--plus-minus i:first-of-type {
   margin-bottom: -6px;
   margin-top: 12px;
 }

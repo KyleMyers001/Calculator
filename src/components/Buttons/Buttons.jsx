@@ -31,7 +31,7 @@ const Buttons = (props) => (
     <button className="calculator__btn-operator" onClick={props.changeOperator.bind(this, operators.add)}>
       <i className="fal fa-plus"></i>
     </button>
-    <button className="calculator__btn-operator calculator__btn-operator__plus-minus" onClick={props.changeNumberState}>
+    <button className="calculator__btn-operator calculator__btn-operator--plus-minus" onClick={props.changeNumberState}>
       <i className="fal fa-plus"></i>
       <i className="fal fa-minus"></i>
     </button>

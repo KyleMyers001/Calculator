@@ -5,8 +5,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 3000,
-    public: 'local.website.com' 
+    port: 3000
   },
   entry: './src/index.js',
   output: {
@@ -46,7 +45,7 @@ module.exports = {
           options: {
             name: '[name].[ext]',
             outputPath: '/',    // where the fonts will go. TODO: Store the font files in a folder called "Fonts"
-            publicPath: './'       // override the default path
+            publicPath: './'   // override the default path
           }
         }]
       }
