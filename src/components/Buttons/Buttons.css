@@ -9,12 +9,16 @@
   padding: 0;
 }
 
+/* TODO: Remove outline on buttons in Chrome.
+  Replace with an active event which changes the color.
+*/
 .calculator button {
   border: 1px solid transparent;
   cursor: pointer;
   font-size: 14px;
   line-height: 75px;
   text-align: center;
+  transition: background-color 0.1s, border 0.1s;
 }
 
 .calculator button:hover {
@@ -24,6 +28,7 @@
 
 .calculator__btn-number {
   background-color: #f2f2f2;
+  font-weight: bold;
 }
 
 .calculator__btn-operator {
